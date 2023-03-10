@@ -39,6 +39,22 @@ const sendAll = () => {
     localStorage.setItem('obj', objStringify);
 }
 
+// display-div
+const display = () => {
+    let div = document.getElementById('display-div');
+    div.innerHTML = '';
+    div.classList.remove('hidden');
+    const getObj = localStorage.getItem('obj');
+    let displayObj;
+    getObj ? displayObj = JSON.parse(getObj) : '-----';
+    // console.log(getObj, displayObj);
+    for (const key in displayObj) {
+        div.innerHTML += `<p><span class="uppercase font-semibold">${key}:</span> ${displayObj[key] ? displayObj[key] : 'no input'}</p>`;
+    }
+}
+
 document.getElementById('btn-reset').addEventListener('click', function () {
     localStorage.clear();
+    const div = document.getElementById('display-div');
+    div.classList.add('hidden')
 })
