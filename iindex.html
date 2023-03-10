@@ -17,38 +17,46 @@
     </header>
     <!-- main section -->
     <main class="text-center">
+
         <section>
             <!-- name -->
             <div class="py-5">
                 <div class="text-center py-2">
                     <span class="label-text">What is your name?</span>
                 </div>
-                <input type="text" placeholder="name" class="input input-bordered input-primary w-full max-w-xs" />
-                <button class="btn btn-outline btn-error">Delete</button>
-                <button class="btn btn-primary">Send</button>
+                <input id="name" type="text" placeholder="name"
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="deleteInput('name')" id="btn-name-delete"
+                    class="btn btn-outline btn-error">Delete</button>
+                <button onclick="sendInput('name')" id="btn-name-send" class="btn btn-primary">Send</button>
             </div>
             <!-- Email -->
             <div class="py-5">
                 <div class="text-center py-2">
                     <span class="label-text">Your Email?</span>
                 </div>
-                <input type="email" placeholder="@email" class="input input-bordered input-primary w-full max-w-xs" />
-                <button class="btn btn-outline btn-error">Delete</button>
-                <button class="btn btn-primary">Send</button>
+                <input id="email" type="email" placeholder="@email"
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="deleteInput('email')" id="btn-email-delete"
+                    class="btn btn-outline btn-error">Delete</button>
+                <button onclick="sendInput('email')" id="btn-email-send" class="btn btn-primary">Send</button>
             </div>
             <!-- massages -->
             <div class="py-5">
                 <div class="text-center py-2">
                     <span class="label-text">Your massages</span>
                 </div>
-                <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
-                <button class="btn btn-outline btn-error">Delete</button>
-                <button class="btn btn-primary">Send</button>
+                <input id="text" type="text" placeholder="Type here"
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="deleteInput('text')" id="btn-text-delete"
+                    class="btn btn-outline btn-error">Delete</button>
+                <button onclick="sendInput('text')" id="btn-text-send" class="btn btn-primary">Send</button>
             </div>
         </section>
-        <!-- send and reset -->
-        <button class="btn btn-outline btn-accent mx-5 mt-4">Send</button>
-        <button class="btn btn-warning mx-5 mt-4">Reset</button>
+        <!-- send, display and reset -->
+        <button onclick="sendAll()" id="btn-send-all" class="btn btn-outline btn-accent mx-5 mt-4">Send</button>
+        <button onclick="display()" class="btn btn-accent text-black">Display</button>
+        <button id="btn-reset" class="btn btn-warning mx-5 mt-4">Reset</button>
     </main>
 
 
